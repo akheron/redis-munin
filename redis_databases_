@@ -39,7 +39,7 @@ if config
   end
 else
   infos.each do |db, infos|
-    puts "#{db}_keys.value #{infos[:keys]}"
+    puts "#{db}_keys.value #{infos[:keys] - infos[:expires]}"
     puts "#{db}_expires.value #{infos[:expires]}"
   end
 end
